@@ -2,10 +2,20 @@
 
 class Voiture extends Vehicule
 {
-    
+
     // private $model;
-    protected string $couleur;
     public int $nbrRoues = 4;
+    private string $carrosserie;
+
+    public function getCarrosserie(): string
+    {
+        return $this->carrosserie;
+    }
+
+    public function setCarrosserie(string $data): void
+    {
+        $this->carrosserie = $data;
+    }
 
     // construction de la couleur a la declaraton de la classes
     // public function __construct(string $data)
@@ -26,7 +36,7 @@ class Voiture extends Vehicule
     // }
 
 
-    
+
 
     public function demarrer()
     {
