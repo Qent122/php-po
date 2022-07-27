@@ -1,12 +1,18 @@
 <?php
-
+require __DIR__ . '/vendor/autoload.php';
 // Fonction permettant le chargement automatique des classes
 spl_autoload_register(function ($className) {
     require_once './classes/' . $className . '.php';
+    // require './date.php';
 });
 
 $berline= new Berline();
-var_dump($berline);
+echo'<pre>';
+// var_dump($berline);
+echo'</pre>';
+
+// echo $berline->savoirSiJaiUnClignotant();
+// log::afficheMessage('Salut');
 
 $voiture1 = new Voiture();
 $voiture1->setMarque('BMW');

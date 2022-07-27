@@ -3,9 +3,18 @@
 class Voiture extends Vehicule
 {
 
-    // private $model;
+    public const CLIGNOTANT = true;
     public int $nbrRoues = 4;
     private string $carrosserie;
+
+    public function savoirSiJaiUnClignotant(): string
+    {
+        if (self::CLIGNOTANT === true) {
+            return 'J\'ai des clignotant !';
+        } else {
+            return 'Je n\'ai pas de clignotant !';
+        }
+    }
 
     public function getCarrosserie(): string
     {
